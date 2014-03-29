@@ -24,3 +24,8 @@ returns.MSFT.corr(returns.GOOG)
 
 ##Correlation matrix
 returns.corr()
+
+##Panel dataset
+pdata = pd.Panel(dict((stk, web.get_data_yahoo(stk, '1/1/2009','6/1/2012')) for stk in ['AAPL','GOOG','MSFT','DELL']))
+
+pdata['AAPL']#Gives you the apple results as a single dataframe
